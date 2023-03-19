@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Anime</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <a href="/test"><button>Скачать в xlsx</button></a>
+    <a href="/anime/add"><button>Добавить аниме</button></a>
+    <a href="/genre/add"><button>Добавить жанр</button></a>
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th>Год</th>
+                <th>Количество эпизодов</th>
+                <th>Жанр</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for anime in anime_list %}
+                <tr>
+                    <td>{{ anime.title }}</td>
+                    <td>{{ anime.year }}</td>
+                    <td>{{ anime.count_episodes }}</td>
+                    <td>{{ anime.genre_name }}</td>
+
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+</body>
+</html>

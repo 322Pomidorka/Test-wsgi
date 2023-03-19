@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/">Go home</a>
+    <form action="" method="POST" accept-charset="UTF-8">
+        ANIME:<br>
+        <input type="text" name="title"><br><br>
+        <input type="date" name="year"><br><br>
+        <input type="text" name="count_episodes"><br><br>
+        <select name="genre">
+            <option selected="true" disabled="disabled"></option>
+            {% for genre in genre_list %}-->
+                <option value="{{genre.id}}">{{genre.title}}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
